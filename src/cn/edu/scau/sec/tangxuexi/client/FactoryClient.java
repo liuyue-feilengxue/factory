@@ -2,17 +2,14 @@ package cn.edu.scau.sec.tangxuexi.client;
 
 //import cn.edu.scau.sec.tangxuexi.abstractFactory.AbstractFactory;
 import cn.edu.scau.sec.tangxuexi.factory.bean.ConsumerElectronics;
-//import cn.edu.scau.sec.tangxuexi.factoryPattern.factory.ConsumerElectronicsFactory;
-//import cn.edu.scau.sec.tangxuexi.factoryPattern.factory.PadFactory;
-//import cn.edu.scau.sec.tangxuexi.factoryPattern.factory.PhoneFactory;
-//import cn.edu.scau.sec.tangxuexi.factoryPattern.factory.WatchFactory;
+import cn.edu.scau.sec.tangxuexi.factoryPattern.factory.*;
 
 public class FactoryClient {
 	public static void main(String[] args) {
-		System.out.println("--简单工厂方法抽象");
-		testSimpleFactory();
-//		System.out.println("--工厂模式");
-//		testFactoryMethod();
+//		System.out.println("--简单工厂方法抽象");
+//		testSimpleFactory();
+		System.out.println("--工厂模式");
+		testFactoryMethod();
 		
 //		System.out.println("--抽象工厂模式");
 //		testAbstractFactory();
@@ -79,20 +76,20 @@ public class FactoryClient {
 		
 	}
 	
-//	private static void testFactoryMethod() {
-////		指定具体工厂类创建该工厂创建的产品
-//		
-//		ConsumerElectronicsFactory padFactory = new PadFactory();
-//		ConsumerElectronics pad = padFactory.getConsumerElectronics();
-//		pad.recreation();
-//		
-//		ConsumerElectronicsFactory phoneFactory = new PhoneFactory();
-//		ConsumerElectronics phone = phoneFactory.getConsumerElectronics();
-//		phone.recreation();
-//		
-//		ConsumerElectronicsFactory watchFactory = new WatchFactory();
-//		ConsumerElectronics watch = watchFactory.getConsumerElectronics();
-//		watch.recreation();
-//		
-//	}
+	private static void testFactoryMethod() {
+//		工厂模式
+		
+		ConsumerElectronicsFactory padFactory = new PadFactory();
+		ConsumerElectronics pad = padFactory.getConsumerElectronics();
+		pad.recreation();
+		
+		ConsumerElectronicsFactory phoneFactory = new PhoneFactory();
+		ConsumerElectronics phone = phoneFactory.getConsumerElectronics();
+		phone.recreation();
+		
+		ConsumerElectronicsFactory watchFactory = new WatchFactory();
+		ConsumerElectronics watch = watchFactory.getConsumerElectronics();
+		watch.recreation();
+		
+	}
 }
